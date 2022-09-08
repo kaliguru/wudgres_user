@@ -16,17 +16,7 @@ class SucessScreen extends StatefulWidget {
 
 class _SucessScreenState extends State<SucessScreen> {
 
-  // setTimer()
-  // {
-  //   Timer(Duration(seconds: 3), () async{
-  //
-  //     Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (c)=>HomeScreen()), (route) => false);
-  //   });
-  // }
-  // @override
-  // void initState() {
-  //     super.initState();
-  //     setTimer();
+  ();
   // }
 
   @override
