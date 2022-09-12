@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "657419221354",
+    "project_id": "wudgres-7329a",
+    "storage_bucket": "wudgres-7329a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657419221354:android:470692a283f66be0a48d13",
+        "android_client_info": {
+          "package_name": "com.wudgres.flutter_main.wudgres_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657419221354-40o32lun7ekacriit4pdoj1u50qmrr72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wudgres.flutter_main.wudgres_main",
+            "certificate_hash": "74b103c8b2b281364c2e9fe58428c5bbf5e04a50"
+          }
+        },
+        {
+          "client_id": "657419221354-2b26k78imh75f87gqj8uibf58hn7gon6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBILFCGp6H84Qfi3yjO9xQ107wk_yARt2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657419221354-2b26k78imh75f87gqj8uibf58hn7gon6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

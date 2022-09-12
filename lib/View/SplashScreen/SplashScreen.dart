@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:wudgres_main/services/auth_service.dart';
 
 import '../../Util/imageConstrants.dart';
 import '../OnBoarding/1_OnBoarding.dart';
@@ -13,9 +14,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  setTimer(){
-    Timer(Duration(seconds: 3), () async{
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (c)=>OnBoarding1()), (route) => false);
+  setTimer() {
+    Timer(Duration(seconds: 3), () async {
+      Navigator.pushAndRemoveUntil(context,
+          MaterialPageRoute(builder: (c) => OnBoarding1()), (route) => false);
     });
   }
 
@@ -37,32 +39,39 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 100,),
-
+              SizedBox(
+                height: 100,
+              ),
               Align(
                 alignment: Alignment.center,
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.green,
+                    color: Colors.green,
                     shape: BoxShape.circle,
                   ),
-                  child: Image.asset(ImageConstrants.APPLOGO,fit: BoxFit.cover,),
-                  width: MediaQuery.of(context).size.width/2,
-                  height: MediaQuery.of(context).size.height/5,
+                  child: Image.asset(
+                    ImageConstrants.APPLOGO,
+                    fit: BoxFit.cover,
+                  ),
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: MediaQuery.of(context).size.height / 5,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 // color: Colors.grey,
                 width: MediaQuery.of(context).size.width,
-                height:MediaQuery.of(context).size.height/3,
-                child: Image.asset(ImageConstrants.BOOLIMG,fit: BoxFit.cover,),
+                height: MediaQuery.of(context).size.height / 3,
+                child: Image.asset(
+                  ImageConstrants.BOOLIMG,
+                  fit: BoxFit.cover,
+                ),
               ),
-
             ],
           ),
         ),
-
       ),
     );
   }
