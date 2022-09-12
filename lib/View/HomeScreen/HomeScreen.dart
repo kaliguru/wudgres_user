@@ -7,6 +7,8 @@ import 'package:wudgres_main/View/MoreScreen/MoreScreen.dart';
 import 'package:wudgres_main/View/WishListScreen/WIshListScreen.dart';
 import 'package:wudgres_main/services/auth_service.dart';
 
+import '../profile/profile.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -25,6 +27,14 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           elevation: 0,
           actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileScreen()));
+                },
+                icon: Icon(Icons.account_circle)),
             IconButton(
                 onPressed: () {
                   AuthService().signOut();
