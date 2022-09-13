@@ -3,8 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:wudgres_main/View/Auth/LoginScreen/LoginScreen.dart';
 import 'package:wudgres_main/View/HomeScreen/HomeScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class AuthService {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  get user => _auth.currentUser;
+  // var email;
+  // var password;
   handleAuthState() {
     return StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
@@ -30,6 +35,29 @@ class AuthService {
     );
 
     return await FirebaseAuth.instance.signInWithCredential(credential);
+  }
+
+  //SIGN UP METHOD
+  Future signUp({required String email, required String password}) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return null;
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
+  }
+
+  //SIGN IN METHOD
+  Future signIn({required String email, required String password}) async {
+    try {
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      return null;
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
   }
 
   signOut() {
